@@ -3,11 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
       <div class="header-top">
-        <a class="header-logo">
+        <a class="header-logo" href="index.html">
           <img src="../css/logo.jpg" width="200" height="100" alt="Gllacy Shop">
         </a>
         <nav class="main-navigation">
@@ -16,7 +19,7 @@
               <a href="catalog.html" class="active-page">Каталог
                 <ul class="sub-menu">
                   <li><a href="#">Новинки</a></li>
-                  <li><a href="#">Сливочное</a></li>
+                  <li><a class="active-page">Сливочное</a></li>
                   <li><a href="#">Щербеты</a></li>
                   <li><a href="#">Фруктовый лед</a></li>
                   <li><a href="#">Мелорин</a></li>
@@ -45,14 +48,14 @@
                 <label for="email"></label>
                 <input type="text" id="password" name="password" placeholder="Пароль">
                 <label for="email"></label>
-                <input type="submit" value="Отправить">
+                <input type="submit" value="Войти">
                 <a href="#">Забыли пароль?</a>
                 <a href="#">Новая регистрация</a>
               </form>
             </li>
             <li>
-              <a href="#" class="cart">2 товара</a>
-              <div class="cart-full">
+              <a href="#" class="cart cart-full">2 товара</a>
+              <div class="cart-full-popup">
                 <div class="cart-item">
                   <button class="cart-delete"></button>
                   <img src="img/orange.jpg" width="50" height="50" alt="Пломбир с апельсиновым джемом">
@@ -86,24 +89,24 @@
         <li><a href="#">Каталог</a></li>
         <li><a>Сливочное</a></li>
       </ul>
-      <h1>Сливочное мороженое</h1>
+      <h1 class="catalog-title">Сливочное мороженое</h1>
       <form class="ice-choice">
-        <span class="sort">Сортировка:</span>
+        <span class="sort-title sort">Сортировка:</span>
         <select class="filter">
           <option value="popular">по популярности</option>
           <option value="cheap">сначала недорогие</option>
           <option value="expensive">сначала дорогие</option>
           <option value="fatcontent">по жирности</option>
         </select>
-        <span class="price">Цена: 100 руб. - 500 руб.</span>
+        <span class=" sort-title price">Цена: 100 руб. - 500 руб.</span>
         <div  class="filter range-controls">
           <div class="scale">
-            <div class="scale-bar">
+            <div class="scale-bar"></div>
           </div>
           <div class="toggle min-toggle"></div>
           <div class="toggle max-toggle"></div>
         </div>
-        <span class="fatcontent">Жирность:</span>
+        <span class="sort-title fatcontent">Жирность:</span>
         <div class="filter">
           <input id="fat_0" type="radio" name="fatcontent" value="0">
           <label for="fat_0">0%</label>
@@ -114,7 +117,7 @@
           <input id="fat>30" type="radio" name="fatcontent" value=">30">
           <label for="fat>30">выше 30%</label>
         </div>
-        <span class="filling">Наполнители:</span>
+        <span class="sort-title filling">Наполнители:</span>
         <div class="filter">
           <input id="chocolate" type="checkbox" name="filling" value="chocolate">
           <label for="chocolate">шоколадные</label>
