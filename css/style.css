@@ -28,7 +28,7 @@ h1, ul, img, p {
 }
 
 .main-header {
-  margin-bottom: 280px;
+  margin-bottom: 275px;
   min-height: 115px;
 }
 
@@ -271,11 +271,6 @@ form.login {
   line-height: 60.35px;
 }
 
-.promo-slider .promo-btn {
-  font-size: 32px;
-  line-height: 44px;
-}
-
 .discount-title {
   font-size: 35px;
   line-height: 41px;
@@ -286,12 +281,13 @@ form.login {
   line-height: 22px;
 }
 
-
-
-
 .top-product-price {
-  font-size: 36px;
+  font-size: 45px;
   line-height: 45px;
+}
+
+.weight {
+  font-size: 30px;
 }
 
 .catalog-item p {
@@ -468,7 +464,6 @@ a.for-provider {
 /*Стили для слайдера*/
 .slider {
   position: relative;
-  padding-top: 0px;
   text-align: center;
   Color: #ffffff;
 }
@@ -486,17 +481,15 @@ a.for-provider {
 .slide-title {
   width: 700px;
   margin: 0 auto;
-  margin-bottom: 27px;
+  margin-bottom: 29px;
   font-size: 60px;
   line-height: 60px;
   font-weight: 800;
 }
 
-
-
 .slider-controls {
   position: absolute;
-  bottom: 24px;
+  bottom: 62px;
   left: 0;
   z-index: 0;
   font-size: 0;
@@ -518,21 +511,21 @@ a.for-provider {
   background-color: #849d8f;
   background-image: url("../img/ice-1.png");
   background-repeat: no-repeat;
-  background-position: center 90px;
+  background-position: center 83px;
 }
 
 #product-2:checked ~ .site-wrapper {
   background-color: #8996a6;
   background-image: url("../img/ice-2.png");
   background-repeat: no-repeat;
-  background-position: center 90px;
+  background-position: center 83px;
 }
 
 #product-3:checked ~ .site-wrapper {
   background-color: #9d8b84;
   background-image: url("../img/ice-3.png");
   background-repeat: no-repeat;
-  background-position: center 90px;
+  background-position: center 83px;
 }
 
 #product-1:checked ~ .site-wrapper #slide1,
@@ -564,7 +557,7 @@ a.for-provider {
 .discount {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 .discount-item {
@@ -572,8 +565,8 @@ a.for-provider {
   height: 229px;
   box-sizing: border-box;
   border-radius: 14px;
-  padding-left: 20px;
-  padding-top: 23px;
+  padding-left: 19px;
+  padding-top: 17px;
   position: relative;
 }
 
@@ -587,7 +580,7 @@ a.for-provider {
 
 .discount-title {
   display: block;
-  margin-bottom: 23px;
+  margin-bottom: 17px;
 }
 
 .discount-item p {
@@ -891,7 +884,7 @@ a.for-provider {
   cursor: pointer;
   border-radius: 25px;
   display: inline-block;
-  padding-top: 12px;
+  padding-top: 10px;
   padding-bottom: 12px;
   background: -webkit-linear-gradient(to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   background: -moz-linear-gradient(to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
@@ -918,7 +911,7 @@ a.for-provider {
 
 .slide-btn {
  display: inline-block;
- padding: 12px 44px;
+ padding: 10px 42px 12px;
  font-size: 32px;
  line-height: 43px;
  vertical-align: top;
