@@ -557,7 +557,7 @@ a.for-provider {
 .discount {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
 .discount-item {
@@ -588,8 +588,6 @@ a.for-provider {
   margin-bottom: 37px;
 }
 
-
-
 .catalog {
   display: flex;
   justify-content: space-between;
@@ -600,22 +598,33 @@ a.for-provider {
   width: 267px;
   position: relative;
   text-align: center;
-  padding-top: 5px;
   min-height: 322px;
+
+}
+
+.catalog-item-content {
+  width: 267px;
+  padding-left: 5px;
+}
+
+.catalog-item-content img {
+  margin-bottom: 10px;
 }
 
 .catalog-item-content > a {
   font-size: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "Roboto"
 }
 
 .top-product-price {
   position: absolute;
-  top: 207px;
+  top: 217px;
   left: 5px;
 }
-
-
 
 .catalog-item-hover {
   position: absolute;
@@ -623,6 +632,7 @@ a.for-provider {
   left: -5px;
   width: 277px;
   margin-right: 26px;
+  padding-top: 5px;
 }
 
 .catalog-item-hover:last-child {
@@ -631,6 +641,7 @@ a.for-provider {
 
 .catalog-item-hover:hover {
   background-color: rgba(255, 255, 255, 0.2);
+  /* width: 293px; */
 }
 
 .features {
@@ -643,14 +654,21 @@ a.for-provider {
 }
 
 .features-description {
-  margin-bottom: 15px;
+  margin-bottom: 22px;
+}
+
+.features-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
 }
 
 .features-item {
   width: 482px;
-  margin-left: 56px;
+  padding-left: 56px;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   position: relative;
 }
 
@@ -674,8 +692,8 @@ a.for-provider {
   width: 49px;
   height: 49px;
   background: red;
-  top: -10px;
-  left: -60px;
+  top: -12px;
+  left: 0px;
   background: url("../img/sprite-features.png") no-repeat;
 }
 
@@ -700,7 +718,7 @@ a.for-provider {
 .blog, .spam {
   width: 560px;
   min-height: 220px;
-  border-radius: 10px;
+  border-radius: 15px;
   box-sizing: border-box;
 }
 
@@ -713,7 +731,7 @@ a.for-provider {
 .blog-title {
   padding-top: 27px;
   font-weight: 500px;
-  margin-bottom: 14px;
+  margin-bottom: 5px;
 }
 
 .blog-10 {
