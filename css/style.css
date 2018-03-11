@@ -8,6 +8,7 @@ body {
   color: #ffffff;
   font-weight: bold;
   font-family: "Roboto", "Arial", sans-serif;
+  background-color: #849d8f;
 }
 
 h1, ul, img, p {
@@ -27,7 +28,7 @@ h1, ul, img, p {
   margin: 0 auto;
 }
 
-.main-header {
+.site-wrapper .main-header {
   margin-bottom: 275px;
   min-height: 115px;
 }
@@ -138,11 +139,6 @@ h1, ul, img, p {
 
 .site-navigation>li:hover .sub-menu{
   display: block;
-}
-
-.active-page {
-  background-color: #d07058;
-  color: #ffffff;
 }
 
 .user-block {
@@ -591,6 +587,7 @@ a.for-provider {
 .catalog {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;  
   margin-bottom: 40px;
 }
 
@@ -969,4 +966,65 @@ a.for-provider {
 .feedback-btn {
   width: 250px;
   margin-bottom: 30px;
+}
+
+.active-page {
+  background-color: #d07058;
+  color: #ffffff;
+}
+
+/* Страница каталога */
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+}
+
+.breadcrumbs a, .breadcrumbs span {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+.breadcrumbs a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.catalog-title {
+  margin-bottom: 20px;
+}
+
+.ice-choice {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.ice-choice div {
+  outline: 1px solid yellow;
+}
+
+.ice-choice .sort {
+  width: 200px;
+}
+
+.ice-choice .price {
+  width: 200px;
+}
+
+.ice-choice .fatcontent {
+  width: 400px;
+}
+
+.ice-choice .filling {
+  width: 600px;
+}
+
+.ice-choice .filter {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
