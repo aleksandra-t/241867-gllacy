@@ -64,8 +64,52 @@
                 <a href="#">Новая регистрация</a>
               </form>
             </li>
-            <li>
-              <a href="#" class="user-btn cart">Пусто</a>
+            <li class="user-btn-cart">
+              <a href="#" class="user-btn cart">2 товара</a>
+              <div class="cart-table">
+                <table>
+                <tr class="cart-table-tr">
+                  <td>
+                    <button class="btn-delete">Удалить</button>
+                  </td>
+                  <td>
+                    <img src="img/ice-cream-1.jpg" width="33" height="33" alt="Фото пломбира с апельсиновым джемом">
+                  </td>
+                  <td class="name-of-ice">
+                    Пломбир с апельсиновым джемом
+                  </td>
+                  <td class="price-for-kg">
+                    1,5 кг х <span class="price-kg">200 руб.</span>
+                  </td>
+                  <td class="price-for-item">
+                    300 руб.
+                  </td>
+                </tr>
+                <tr class="cart-table-tr">
+                  <td>
+                    <button class="btn-delete">Удалить</button>
+                  </td>
+                  <td>
+                    <img src="img/ice-cream-3.jpg" width="33" height="33" alt="Фото клубничного пломбира с присыпкой из белого шоколада">
+                  </td>
+                  <td class="name-of-ice">
+                    Клубничный пломбир с присыпкой из белого шоколада
+                  </td>
+                  <td class="price-for-kg">
+                    1,5 кг х <span class="price-kg">300 руб.</span>
+                  </td>
+                  <td class="price-for-item">
+                    450 руб.
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="5" class="total-price">
+                    <strong>Итого: 750 руб.</strong>
+                  </td>
+                </tr>
+              </table>
+              <a class="btn cart-btn" href="#">Оформить заказ</a>
+            </div>
             </li>
           </ul>
         </div>
@@ -125,15 +169,15 @@
         <div class="filling">
           <span class="sort-title">Наполнители:</span>
           <div class="filter">
-            <input id="chocolate" type="checkbox" name="filling" value="chocolate" checked>
+            <input id="chocolate" type="checkbox" name="chocolate" value="chocolate" checked>
             <label for="chocolate">шоколадные</label>
-            <input id="sugar" type="checkbox" name="filling" value="sugar" checked>
+            <input id="sugar" type="checkbox" name="sugar" value="sugar" checked>
             <label for="sugar">сахарные присыпки</label>
-            <input id="fruits" type="checkbox" name="filling" value="fruits">
+            <input id="fruits" type="checkbox" name="fruits" value="fruits">
             <label for="fruits">фрукты</label>
-            <input id="syrup" type="checkbox" name="filling" value="syrup">
+            <input id="syrup" type="checkbox" name="syrup" value="syrup">
             <label for="syrup">сиропы</label>
-            <input id="jam" type="checkbox" name="filling" value="jam">
+            <input id="jam" type="checkbox" name="jam" value="jam">
             <label for="jam">джемы</label>
           </div>
         </div>

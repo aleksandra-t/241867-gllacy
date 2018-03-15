@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Глейси</title>
+    <title>Gllacy</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -49,23 +49,25 @@
               </ul>
             </nav>
             <ul class="user-block">
-              <li>
+              <li class="user-btn-search">
                   <a href="#" class="user-btn search"><span class="visually-hidden">Поиск</span></a>
                   <form class="search-field" action="#" method="get">
                     <input type="text" id="search" name="search" placeholder="Что ищем?">
                     <label for="search" class="visually-hidden">Что ищем?</label>
                   </form>
               </li>
-              <li>
+              <li class="user-block-login clearfix">
                 <a href="#" class="user-btn login-link">Вход</a>
                 <form class="login" action="#" method="post">
                   <input type="text" id="email" name="email" placeholder="Электронная почта">
                   <label for="email" class="visually-hidden">Электронная почта</label>
                   <input type="text" id="password" name="password" placeholder="Пароль">
                   <label for="password" class="visually-hidden">Пароль</label>
-                  <input type="submit" value="Войти">
-                  <a href="#">Забыли пароль?</a>
-                  <a href="#">Новая регистрация</a>
+                  <input type="submit" value="Войти" class="btn login-btn">
+                  <div class="form-link">
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Новая регистрация</a>
+                  </div>
                 </form>
               </li>
               <li>
@@ -122,7 +124,7 @@
               <a href="#" class="btn discount-btn">Хочу шоколадки!</a>
             </div>
           </section>
-          <section class="catalog">
+          <section class="catalog catalog-hit">
             <div class="catalog-item">
               <div class="catalog-item-hover">
                 <div class="catalog-item-content">
@@ -248,5 +250,18 @@
           </div>
         </div>
       </footer>
+      <div class="popup-feedback">
+        <p class="popup-text">Мы обязательно вам ответим</p>
+        <form class="feedback-form">
+          <input type="text" id="feedback-name" name="name" placeholder="Как вас зовут?">
+          <label for="feedback-name" class="visually-hidden">Ваше имя</label>
+          <input type="text" id="feedback-email" name="email" placeholder="Ваша почта для ответа?">
+          <label for="feedback-email" class="visually-hidden">Электронная почта</label>
+          <textarea name="question" id="question">Напишите что-нибудь...</textarea>
+          <label for="question">Напишите что-нибудь</label>
+          <input type="submit" value="Отправить" class="btn">
+        </form>
+        <button class="popup-close" type="button"><span class=" visually-hidden">Закрыть</span></button>
+      </div>
     </body>
 </html>
