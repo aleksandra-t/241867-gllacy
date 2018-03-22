@@ -1,4 +1,4 @@
-body {
+﻿body {
   min-width: 1200px;
   /* min-height: 2416px; */
   margin: 0;
@@ -275,6 +275,7 @@ form.login {
   right: 0;
   top: 36px;
   border-radius: 10px;
+  z-index: 10;
 }
 
 .login input {
@@ -938,7 +939,7 @@ a.for-provider {
   vertical-align: top;
   background-image: url("../img/sprite-social.png");
   border: 3px solid rgb(194, 206, 199);
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .social-btn:hover {
@@ -1066,6 +1067,7 @@ a.for-provider {
 
 .catalog-item:hover .btn {
   display: block;
+  color: #ffffff;
 }
 
 .spam .btn {
@@ -1094,15 +1096,22 @@ a.for-provider {
 }
 
 .breadcrumbs a, .breadcrumbs span {
-  display: block;
+  display: inline-block;
   font-weight: 400;
   font-size: 14px;
-  margin-right: 15px;
+  margin-right: 8px;
 }
 
 .breadcrumbs a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
 }
+
+/* .breadcrumbs a::after {
+  content: "";
+  position: absolute;
+
+} */
 
 .catalog-title {
   margin-bottom: 20px;
@@ -1267,6 +1276,15 @@ a.for-provider {
   border: 5px solid #aabcb2;
   background: #aabcb2;
   box-shadow: 0 0 0 3px #ffffff;
+  opacity: 0.8;
+}
+
+.fatcontent label:hover::before {
+  opacity: 1;
+}
+
+.fatcontent label:disabled::before {
+  opacity: 0.6;
 }
 
 input[type="radio"]:checked+label::before {
@@ -1291,11 +1309,25 @@ input[type="checkbox"] {
 .filling label::before {
   content: "";
   position: absolute;
-  width: 19px;
-  height: 19px;
-  border: 2px solid #ffffff;
+  width: 20px;
+  height: 20px;
   left: 15px;
   border-radius: 1px;
+  background: url("../img/checkbox-off.png");
+  opacity: 0.8;
+}
+
+input[type="checkbox"]:checked+label::before {
+  width: 23px;
+  background: url("../img/checkbox-on.png");
+}
+
+.filling label:hover::before {
+  opacity: 1;
+}
+
+.filling label:disabled::before {
+  opacity: 0.6;
 }
 
 .ice-choice input[type="submit"] {
@@ -1311,11 +1343,13 @@ input[type="checkbox"] {
 
 .popup-feedback {
   display: none;
-  width: 477px;
+  width: 430px;
   background-color: #f8f7f4;
   border-radius: 10px;
   padding: 20px 24px;
-  position: relative;
+  position: fixed;
+  left: 35%;
+  top: 25%;
 }
 
 .feedback-form {
@@ -1360,18 +1394,24 @@ input[type="checkbox"] {
 
 .popup-close {
   position: absolute;
-  top: 15px;
-  right: 25px;
+
   background: transparent;
   border: none;
   cursor: pointer;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  top: 10px;
+  right: 25px;
 }
 
 .popup-close::before, .popup-close::after {
   content: "";
   position: absolute;
-  width: 27px;
-  height: 3px;
+  width: 25px;
+  height: 2px;
   background: #000000;
 }
 .popup-close::before {
@@ -1482,7 +1522,7 @@ input[type="checkbox"] {
   float: right;
 }
 
-.catalog-item a:hover, .blog-10 a:hover, .info a:hover, .documents a:hover, .copyright a:hover
+.catalog-item a:hover, .blog-10 a:hover, .info a:hover, .documents a:hover, .copyright a:hover,
 .catalog-item a:active, .blog-10 a:active, .info a:active, .documents a:active, .copyright a:active {
   color: #ffbc9e;
   border-bottom: 1px solid #ffbc9e;
@@ -1498,4 +1538,51 @@ select.filter option {
 
 select.filter:hover {
   color: #000000;
+}
+
+input[type="text"]:hover, textarea:hover {
+  border-color: #c7c6c5;
+  /* border-width: 2px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  box-sizing: border-box;
+  padding-left: 13px; */
+}
+
+input[type="text"]:focus, textarea:focus {
+  border-color: #8fbdec;
+  outline: none;
+}
+
+input[type="text"] {
+  font-weight: 700;
+  box-sizing: border-box;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  font-weight: 400;
+}
+
+.popup-feedback-show {
+  display: block;
+  animation-name: animation-feedback;
+  animation-duration: 0.6s;
+}
+
+@keyframes animation-feedback {
+  0% {transform: translateX(-2000px);}
+  70% {transform: translateX(50px);}
+  90% {transform: translateX(-10px);}
+  100% {transform: translateX(0px);}
+}
+
+.popup-feedback-error {
+  animation-name: error;
+  animation-duration: 0.6s;
+}
+
+@keyframes error {
+  0%, 100% {transform: translateX(0px);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {transform: translateX(10px);}
 }
