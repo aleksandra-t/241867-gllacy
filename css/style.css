@@ -644,7 +644,7 @@ a.for-provider {
 
 .discount-item {
   width: 560px;
-  height: 229px;
+  min-height: 229px;
   box-sizing: border-box;
   border-radius: 14px;
   padding-left: 19px;
@@ -1004,7 +1004,7 @@ a.for-provider {
   font-weight: 700;
   text-decoration: none;
   border: none;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   text-align: center;
   cursor: pointer;
   border-radius: 25px;
@@ -1046,37 +1046,47 @@ a.for-provider {
 }
 
 .discount-btn {
-  width: 165px;
-  position: absolute;
-  right: 20px;
-  bottom: 23px;
+  float: right;
+  margin-right: 21px;
+}
+
+.raspberry .btn {
+  padding-left: 22px;
+  padding-right: 24px;
 }
 
 .chocolate .btn {
-  width: 189px;
+  padding-left: 21px;
+  padding-right: 22px;
 }
 
 .catalog-item .btn {
   position: relative;
-  left: 50px;
+  display: inline-block;
   margin-top: 10px;
   margin-bottom: 20px;
   display: none;
-  width: 202px;
+  /* width: 202px; */
+  padding-left: 17px;
+  padding-right: 17px;
 }
 
 .catalog-item:hover .btn {
-  display: block;
+  display: inline-block;
   color: #ffffff;
 }
 
 .spam .btn {
-  width: 130px;
+  /* width: 130px; */
+  padding-left: 19px;
+  padding-right: 19px;
 }
 
 .feedback-btn {
-  width: 250px;
+  /* width: 250px; */
   margin-bottom: 30px;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 
 .active-page {
@@ -1106,12 +1116,6 @@ a.for-provider {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
 }
-
-/* .breadcrumbs a::after {
-  content: "";
-  position: absolute;
-
-} */
 
 .catalog-title {
   margin-bottom: 20px;
