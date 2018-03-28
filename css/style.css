@@ -11,7 +11,7 @@
   background-color: #849d8f;
 }
 
-h1, ul, img, p {
+h1, ul, img, p, span {
   margin: 0;
   padding: 0;
 }
@@ -170,6 +170,7 @@ img {
 
 .user-block li {
   display: inline-block;
+  margin-top: 2px;
 }
 
 .user-block>li>a {
@@ -210,8 +211,8 @@ img {
   background: url("../img/search.png") no-repeat;
   width: 17px;
   height: 17px;
-  left: 8px;
-  top: 8px;
+  left: 7px;
+  top: 7px;
 }
 
 .user-block .search:hover::before {
@@ -325,7 +326,7 @@ form.login {
 .user-block .cart {
   width: 117px;
   border-radius: 20px;
-  padding-left: 45px;
+  padding-left: 41px;
   position: relative;
 }
 
@@ -335,11 +336,20 @@ form.login {
   width: 21px;
   height: 20px;
   background: url("../img/cart.png") no-repeat;
-  left: 16px;
-  top: 6px;
+  left: 13px;
+  top: 8px;
 }
 
 .user-block .cart:hover::after {
+  background: url("../img/cart-full.png") no-repeat;
+}
+
+.user-block .cart-full {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.user-block .cart-full::after {
   background: url("../img/cart-full.png") no-repeat;
 }
 
@@ -510,7 +520,7 @@ a.for-provider {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
-  padding-left: 16px;
+  padding-left: 15px;
   margin-bottom: 8px;
   display: block;
 }
@@ -735,8 +745,8 @@ a.for-provider {
 
 .top-product-price {
   position: absolute;
-  top: 212px;
-  left: 5px;
+  top: 214px;
+  left: 3px;
 }
 
 .top-product-price::after {
@@ -1021,6 +1031,12 @@ a.for-provider {
 .info {
   margin-right: 30px;
   position: relative;
+  width: 111px;
+}
+
+.documents {
+  margin-right: 232px;
+  width: 163px;
 }
 
 .info ul, .documents ul {
@@ -1034,7 +1050,7 @@ a.for-provider {
 }
 
 .copyright {
-  margin-left: 230px;
+  /* margin-left: 232px; */
 }
 
 .for-provider::before {
@@ -1159,6 +1175,7 @@ a.for-provider {
 .breadcrumbs {
   list-style: none;
   margin-top: -25px;
+  margin-bottom: 2px;
 }
 
 .breadcrumbs li {
@@ -1169,7 +1186,7 @@ a.for-provider {
   display: inline-block;
   font-weight: 400;
   font-size: 14px;
-  margin-right: 8px;
+  margin-right: 3px;
 }
 
 .breadcrumbs a {
@@ -1178,7 +1195,7 @@ a.for-provider {
 }
 
 .catalog-title {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .ice-choice {
@@ -1202,8 +1219,11 @@ a.for-provider {
 }
 
 .paginator {
-  margin-top: 80px;
+  margin: 0;
+  margin-top: 43px;
   text-align: right;
+  margin-right: -8px;
+  margin-bottom: 49px;
 }
 
 .paginator a {
@@ -1211,7 +1231,6 @@ a.for-provider {
   font-weight: 500;
   color: #ffffff;
   text-decoration: none;
-  margin-right: 5px;
   width: 17px;
   height: 22px;
   display: inline-block;
@@ -1237,14 +1256,18 @@ a.for-provider {
   border-radius: 50%;
 }
 
+.paginator-page:last-child {
+  margin-right: 0;
+}
+
 .paginator .next {
   font-size: 0;
 }
 
 .ice-choice .sort{
   width: 195px;
-  margin-right: 15px;
-  margin-bottom: 16px;
+  margin-right: 10px;
+  margin-bottom: 18px;
 }
 
 .sort .filter {
@@ -1252,8 +1275,7 @@ a.for-provider {
   line-height: 18px;
   font-weight: 500;
   width: 195px;
-  padding-left: 16px;
-
+  padding-left: 10px;
 }
 
 .ice-choice .price {
@@ -1266,12 +1288,12 @@ a.for-provider {
 }
 
 .ice-choice .filling {
-  width: 705px;
+  width: 700px;
 }
 
 .scale {
   position: relative;
-  height: 2px;
+  height: 3px;
   background-color: rgba(255, 255, 255, 0.2);
   width: 176px;
   top: 16px;
@@ -1279,7 +1301,7 @@ a.for-provider {
 }
 
 .scale-bar {
-  width: 88px;
+  width: 84px;
   background-color: #ffffff;
   left: 30px;
   position: relative;
@@ -1308,12 +1330,12 @@ a.for-provider {
 }
 
 .min-toggle {
-  left: 34px;
+  left: 35px;
   top: 7px;
 }
 
 .max-toggle {
-  right: 66px;
+  right: 65px;
   top: 7px;
 }
 
@@ -1327,19 +1349,20 @@ a.for-provider {
 
 .fatcontent label {
   margin-left: 45px;
-  padding: 6px 0;
+  padding: 10px 0 7px;
   display: inline-block;
+  vertical-align: top;
 }
 
 .fatcontent label::before {
   content: "";
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  left: -30px;
-  top: 5px;
-  border: 5px solid #aabcb2;
+  left: -27px;
+  top: 9px;
+  border: 4px solid #aabcb2;
   background: #aabcb2;
   box-shadow: 0 0 0 3px #ffffff;
   opacity: 0.8;
@@ -1368,10 +1391,11 @@ input[type="checkbox"] {
 .filling label {
   padding-left: 46px;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   position: relative;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-right: 3px;
 }
 
 .filling label::before {
@@ -1403,7 +1427,8 @@ input[type="checkbox"]:checked+label::before {
   padding-right: 29px;
   border: 2px solid #ffffff;
   border-radius: 25px;
-  height: 32px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   -ms-flex-item-align: end;
   align-self: flex-end;
   font-size: 16px;
@@ -1630,6 +1655,7 @@ input[type="text"] {
 
 input[type="text"]::-webkit-input-placeholder {
   font-weight: 400;
+  color: #999999;
 }
 
 .popup-feedback-show {
