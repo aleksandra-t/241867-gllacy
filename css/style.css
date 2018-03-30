@@ -21,12 +21,6 @@ img {
   height: auto;
 }
 
-/*Для сетки временно*/
-/*body {
-  background-image: url("../img/gllacy-index-1200.jpg");
-  background-repeat: no-repeat;
-}*/
-
 .container {
   width: 1146px;
   padding: 0 27px;
@@ -80,6 +74,15 @@ img {
   border-radius: 20px;
 }
 
+.site-navigation>li::after {
+  content: "";
+  position: absolute;
+  width: 143px;
+  height: 5px;
+  top: 37px;
+  left: 0px;
+}
+
 .site-navigation>li:hover {
   background: #f7f6f3;
 }
@@ -110,7 +113,7 @@ img {
   width: 143px;
   border-radius: 5px;
   left: -7px;
-  top: 40px;
+  top: 42px;
   overflow: hidden;
 }
 
@@ -208,7 +211,7 @@ img {
 .user-block .search::before {
   content: "";
   position: absolute;
-  background: url("../img/search.png") no-repeat;
+  background: url("../img/search.svg") no-repeat;
   width: 17px;
   height: 17px;
   left: 7px;
@@ -216,7 +219,7 @@ img {
 }
 
 .user-block .search:hover::before {
-  background: url("../img/search-hov.png");
+  background: url("../img/search-hov.svg");
 }
 
 .user-block-search {
@@ -256,7 +259,7 @@ img {
 .user-block .login-link::before {
   content: "";
   position: absolute;
-  background: url("../img/login.png") no-repeat;
+  background: url("../img/login.svg") no-repeat;
   width: 21px;
   height: 19px;
   left: 16px;
@@ -264,7 +267,7 @@ img {
 }
 
 .user-block .login-link:hover::before {
-  background: url("../img/login-hover.png") no-repeat;
+  background: url("../img/login-hover.svg") no-repeat;
 }
 
 .user-block-login {
@@ -335,13 +338,13 @@ form.login {
   position: absolute;
   width: 21px;
   height: 20px;
-  background: url("../img/cart.png") no-repeat;
+  background: url("../img/cart.svg") no-repeat;
   left: 13px;
   top: 8px;
 }
 
 .user-block .cart:hover::after {
-  background: url("../img/cart-full.png") no-repeat;
+  background: url("../img/cart-full.svg") no-repeat;
 }
 
 .user-block .cart-full {
@@ -350,7 +353,7 @@ form.login {
 }
 
 .user-block .cart-full::after {
-  background: url("../img/cart-full.png") no-repeat;
+  background: url("../img/cart-full.svg") no-repeat;
 }
 
 .user-block .cart-full {
@@ -480,6 +483,10 @@ input[type="submit"] {
 
 a.for-provider {
   font-weight: 700;
+}
+
+.copyright img {
+
 }
 
 .copyright p {
@@ -650,11 +657,11 @@ a.for-provider {
 }
 
 .site-wrapper::before {
-  background-image: url("img/ice-2.png");
+  background-image: url("../img/ice-2.png");
 }
 
 .site-wrapper::after {
-  background-image: url("img/ice-3.png");
+  background-image: url("../img/ice-3.png");
 }
 
 .discount {
@@ -730,7 +737,7 @@ a.for-provider {
   height: 61px;
   z-index: 101;
   left: 0;
-  background-image: url("../img/hit.png");
+  background-image: url("../img/hit.svg");
   background-repeat: no-repeat;
 }
 
@@ -740,7 +747,6 @@ a.for-provider {
   text-decoration: none;
   color: #ffffff;
   font-weight: 500;
-  font-family: "Roboto"
 }
 
 .top-product-price {
@@ -771,7 +777,6 @@ a.for-provider {
   width: 277px;
   margin-right: 26px;
   padding-top: 5px;
-
 }
 
 .catalog-item-hover:last-child {
@@ -868,6 +873,7 @@ a.for-provider {
 
 .blog {
   background-image: url("../img/blog.jpg");
+  background-position: 17% 40%;
   background-repeat: no-repeat;
   padding-left: 18px;
   background-color: #ffffff;
@@ -875,7 +881,6 @@ a.for-provider {
 
 .blog-title {
   padding-top: 25px;
-  font-weight: 500px;
   margin-bottom: 3px;
 }
 
@@ -1050,7 +1055,7 @@ a.for-provider {
 }
 
 .copyright {
-  /* margin-left: 232px; */
+  width: 188px;
 }
 
 .for-provider::before {
@@ -1058,7 +1063,7 @@ a.for-provider {
   position: absolute;
   width: 15px;
   height: 13px;
-  background-image: url("../img/like.png");
+  background-image: url("../img/like.svg");
   left: -22px;
   top: 10px;
 }
@@ -1276,6 +1281,7 @@ a.for-provider {
   font-weight: 500;
   width: 195px;
   padding-left: 10px;
+  border: none;
 }
 
 .ice-choice .price {
@@ -1405,13 +1411,15 @@ input[type="checkbox"] {
   height: 20px;
   left: 15px;
   border-radius: 1px;
-  background: url("../img/checkbox-off.png");
+  background-image: url("../img/checkbox-off.svg");
   opacity: 0.8;
+  color: rgb(255, 255, 255);
+  border-color: #ffffff;
 }
 
 input[type="checkbox"]:checked+label::before {
   width: 23px;
-  background: url("../img/checkbox-on.png");
+  background: url("../img/checkbox-on.svg");
 }
 
 .filling label:hover::before {
@@ -1720,4 +1728,39 @@ input[type="text"]::-webkit-input-placeholder {
 
 .next:hover::before {
   border-color: #000000;
+}
+
+iframe {
+  border: none;
+  width: 1200px;
+  height: 429px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.choice{
+  position: relative;
+}
+
+.choice::after {
+  content:"";
+  position: absolute;
+  width: 11px;
+  height: 10px;
+  background-image: url("../img/select.svg");
+  top: 12px;
+  left: 168px;
+}
+
+.choice:hover::after {
+  background-image: url("../img/select-hov.svg");
 }
